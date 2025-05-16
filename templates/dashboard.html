@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <a href="/logout">Log Out</a>
+  <hr>
+
+  <h2>Messages:</h2>
+  {% for msg in messages %}
+    <div>
+      <strong>{{ msg.name }}</strong> ({{ msg.email }}) says:<br>
+      <p>{{ msg.message }}</p>
+      <hr>
+    </div>
+  {% else %}
+    <p>No messages yet.</p>
+  {% endfor %}
+</body>
+</html>

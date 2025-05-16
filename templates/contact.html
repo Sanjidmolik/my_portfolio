@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Contact Me</h1>
+
+  <nav>
+    <a href="/">Home</a> |
+    <a href="/about">About</a> |
+    <a href="/projects">Projects</a> |
+    <a href="/contact">Contact</a>
+  </nav>
+
+  <hr>
+
+  <p>I'd love to hear from you! Fill out the form below to send me a message:</p>
+
+  <form action="https://formsubmit.co/YOUR-EMAIL" method="POST">
+  <input type="text" name="name" placeholder="Your name" required><br>
+  <input type="email" name="email" placeholder="Your email" required><br>
+  <textarea name="message" placeholder="Your message" required></textarea><br>
+  <button type="submit">Send</button>
+</form>
